@@ -13,8 +13,8 @@ local function Jail(ply, cmd, args)
     local time = ""
 
     for _, target in pairs(targets) do
-        if not FAdmin.Access.PlayerHasPrivilege(ply, "Jail", target) then FAdmin.Messages.SendMessage(ply, 5, "No access!") return false end
         if not IsValid(target) then continue end
+        if not FAdmin.Access.PlayerHasPrivilege(ply, "Jail", target) then FAdmin.Messages.SendMessage(ply, 5, "No access!") return false end
         local jailDistance = 50
 
         ply:ExitVehicle()
